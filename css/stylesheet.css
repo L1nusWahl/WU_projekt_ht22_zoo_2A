@@ -1,42 +1,65 @@
 *{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;  
+    padding: 0;  
+    box-sizing: border-box;
 }
 
 h1{ 
-    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
   
 
 h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 40px;
+    font-size: 36px;
+    grid-area: h2;
 }
 
 #grid_wrapper{ 
     display: grid;
-    height: 100vh;
+    height: 400vh;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 80px 30px 200px 700px minmax(100px, 1fr);
+    grid-template-rows: 80px 30px 400px 400px 1300px 400px minmax(100px, 1fr);
     grid-template-areas: 
-    "he he"
+    "he he"   
     "na na"
     "s1 s1"
     "s1 s1"
-    "s1 s1"
-    "s1 s1"
     "s2 s2"
-    "fo fo";   
+    "fo fo";
+}
+
+#container{ 
+    display: grid;
+    height: 300vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 30px 250px 1300px 400px minmax(100px, 2fr);
+    grid-template-areas: 
+    "he he he he he"   
+    "na na na na na"
+    "s1 s1 s1 s1 s1"
+    "s2 s2 s2 s2 s2"
+    "fo fo fo fo fo";
+
+}
+
+
+
+#Lejon { 
+    height: auto;
+    width: 100%;
+    background-color: #344836;
+    padding: 10px;
+    
 }
 
 header{ 
     display: flex;
     grid-area: he;
-    background: green;
+    background: #567659;
     justify-content: center;
     align-items: center;
-
 }
 
 nav{ 
@@ -44,7 +67,7 @@ nav{
     justify-content: space-evenly;
     align-items: center;
     grid-area: na;
-    background: green;
+    background: #567659;
 }
 
 #section_1{ 
@@ -52,28 +75,51 @@ nav{
     background: antiquewhite;
 }
 
-img{
-    height: auto;
-    width: 100%;
-}
 
 #section_2{ 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 70px);
+    grid-template-areas: 
+    "h2 h2 h2 h2 h2 h2"
+    ".. a1 .. a2 .. a3"
+    ".. a1 .. a2 .. a3"
+    ".. a4 .. a5 .. a6"
+    ".. a4 .. a5 .. a6"
+    ".. a4 .. a5 .. a6";
     grid-area: s2;
-    background: antiquewhite;
 }
 
 footer{ 
+    display: flex;
     grid-area: fo;
-    background: green;
+    width: 100%;
+    background: #ddcfad;
+    border-top: 3px solid #bdb296;
+    padding: 50px 50px;
+    flex-direction: column;
 }
 
-a:hover { 
-    color: blue;
-    text-transform: uppercase;
+.text_p { 
+    display: flex;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    align-items: center;
+    justify-content: center;
 
 }
 
-a {
+p{
+    display: block;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#link {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -81,4 +127,64 @@ a {
     font-size: 1.5rem;
     color: black;
     text-decoration: none;
+}
+
+h2 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: garamond, serif;
+
+}
+
+#Kontakta_oss { 
+    display: block;
+    margin-block-start: 2rem;
+    color: black;
+}
+
+#anställd_1 { 
+    display: flexbox;
+    background: #567659;
+    border: 2px solid black;
+    border-radius: 3px;
+    grid-area: a1;
+}
+
+#anställd_2 { 
+    display: flexbox;
+    background: #567659;
+    border: 2px solid black;
+    border-radius: 3px;
+    grid-area: a2;
+}
+
+#anställd_3 { 
+    display: flexbox;
+    background: #567659;
+    border: 2px solid black;
+    border-radius: 3px;
+    grid-area: a3;
+}
+
+#anställd_4 { 
+
+    background: #567659;
+    border: 2px solid black;
+    border-radius: 3px;
+    grid-area: a4;
+}
+
+#anställd_5 { 
+    background: #567659;
+    border: 2px solid black;
+    border-radius: 3px;
+    grid-area: a5;
+}
+
+#anställd_6 { 
+    background: #567659;
+    border: 2px solid black;
+    border-radius: 3px;
+    grid-area: a6;
 }
