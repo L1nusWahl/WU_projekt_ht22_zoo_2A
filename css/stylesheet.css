@@ -6,6 +6,7 @@
 
 h1{ 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       font-size: 38px;
 }
   
 
@@ -33,25 +34,22 @@ h2{
 #container{ 
     display: grid;
     height: 300vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 80px 30px 250px 1300px 400px minmax(100px, 2fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 30px 250px 80px 1100px 400px;
     grid-template-areas: 
-    "he he he he he"   
-    "na na na na na"
-    "s1 s1 s1 s1 s1"
-    "s2 s2 s2 s2 s2"
-    "fo fo fo fo fo";
-
+    "he he"   
+    "na na"
+    "om om"
+    "vi vi"
+    "s2 s2"
+    "fo fo";
 }
-
-
 
 #Lejon { 
     height: auto;
     width: 100%;
     background-color: #344836;
     padding: 10px;
-    
 }
 
 header{ 
@@ -68,26 +66,33 @@ nav{
     align-items: center;
     grid-area: na;
     background: #567659;
+    border-bottom: 10px;
+    border-color: #344836;  
 }
 
 #section_1{ 
     grid-area: s1;
-    background: antiquewhite;
+    background: antiquewhite;  
 }
 
 
 #section_2{ 
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 70px);
-    grid-template-areas: 
-    "h2 h2 h2 h2 h2 h2"
-    ".. a1 .. a2 .. a3"
-    ".. a1 .. a2 .. a3"
-    ".. a4 .. a5 .. a6"
-    ".. a4 .. a5 .. a6"
-    ".. a4 .. a5 .. a6";
+    display: flex;
     grid-area: s2;
+    background: antiquewhite;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#Om_oss{ 
+    display: flex;
+    grid-area: om;
+    background: antiquewhite;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 10px solid #344836;
+    
+
 }
 
 footer{ 
@@ -112,7 +117,7 @@ footer{
 }
 
 p{
-    display: block;
+    display: flex;
     margin-block-start: 1rem;
     margin-block-end: 1rem;
     margin-inline-start: 0px;
@@ -137,54 +142,29 @@ h2 {
 
 }
 
+#vi_som_jobbar_här {
+    grid-area: vi;
+    background-color: antiquewhite;
+}
 #Kontakta_oss { 
     display: block;
     margin-block-start: 2rem;
     color: black;
 }
 
-#anställd_1 { 
-    display: flexbox;
-    background: #567659;
-    border: 2px solid black;
-    border-radius: 3px;
-    grid-area: a1;
+.arbetare {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    border: 3px solid black;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px; 
 }
-
-#anställd_2 { 
-    display: flexbox;
-    background: #567659;
-    border: 2px solid black;
-    border-radius: 3px;
-    grid-area: a2;
-}
-
-#anställd_3 { 
-    display: flexbox;
-    background: #567659;
-    border: 2px solid black;
-    border-radius: 3px;
-    grid-area: a3;
-}
-
-#anställd_4 { 
-
-    background: #567659;
-    border: 2px solid black;
-    border-radius: 3px;
-    grid-area: a4;
-}
-
-#anställd_5 { 
-    background: #567659;
-    border: 2px solid black;
-    border-radius: 3px;
-    grid-area: a5;
-}
-
-#anställd_6 { 
-    background: #567659;
-    border: 2px solid black;
-    border-radius: 3px;
-    grid-area: a6;
+    
+#bild_anställd { 
+    height: auto;
+    width: 100%;
+    border-bottom: 3px solid black;
 }
