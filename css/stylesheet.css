@@ -6,43 +6,44 @@
 
 h1{ 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-       font-size: 38px;
+    font-size: 38px;
 }
-  
-
-h2{
+h2 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: garamond, serif;
+    font-size: 24px;
+}
+h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 40px;
     font-size: 36px;
-    grid-area: h2;
 }
 
-#grid_wrapper{ 
+h4 { 
+    font-size: 36px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h5 {
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#main_page{ 
     display: grid;
     height: 400vh;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: 80px 30px 400px 400px 1300px 400px minmax(100px, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 30px 400px 400px 800px 1000px 500px 400px;
     grid-template-areas: 
-    "he he"   
-    "na na"
-    "s1 s1"
-    "s1 s1"
-    "s2 s2"
-    "fo fo";
-}
-
-#container{ 
-    display: grid;
-    height: 300vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 30px 250px 80px 1100px 400px;
-    grid-template-areas: 
-    "he he"   
-    "na na"
-    "om om"
-    "vi vi"
-    "s2 s2"
-    "fo fo";
+    "he he if"   
+    "na na na"
+    "sl sl sl"
+    "sl sl sl"
+    "op op op"
+    "ny ny ny"
+    "va va va"
+    "fo fo fo";
 }
 
 #Lejon { 
@@ -56,8 +57,48 @@ header{
     display: flex;
     grid-area: he;
     background: #567659;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+
+}
+
+#information {
+    display: flex;
     justify-content: center;
     align-items: center;
+    background: #567659;
+    grid-area: if;
+}
+
+#link_om_oss{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+#link_om_oss:hover{ 
+    text-decoration: underline;
+}
+
+#link_nyhetsbrev {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+#link_nyhetsbrev:hover {
+    text-decoration: underline;
+}
+
+#link_press {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+#link_press:hover {
+    text-decoration: underline;
 }
 
 nav{ 
@@ -67,21 +108,107 @@ nav{
     grid-area: na;
     background: #567659;
     border-bottom: 10px;
-    border-color: #344836;  
-}
-
-#section_1{ 
-    grid-area: s1;
-    background: antiquewhite;  
+    border-color: #344836; 
 }
 
 
-#section_2{ 
-    display: flex;
-    grid-area: s2;
+#section_lejon{ 
+    grid-area: sl;
     background: antiquewhite;
-    flex-wrap: wrap;
-    justify-content: center;
+}
+
+#oppetider {
+    grid-area: op;
+    display: flex;
+    background: antiquewhite;
+    border-top: solid #344836;
+    border-width: 10px;
+}
+
+#oppetider_ruta{
+    display: flex;
+    width: 800px;
+    height: 200px;
+    border: 3px solid black;   
+}
+#nyheter {
+    grid-area: ny;
+    display: flex;
+    background: antiquewhite;
+    border-top: solid #bdb296;
+    border-width: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Lizard_bild {
+    width: auto;
+    height: 100%;
+}
+
+.nyheter_rutor {
+    display: flex;
+    width: 1100px;
+    height: 250px;
+    background-color: white;
+    margin: 40px; 
+    justify-content: space-evenly;
+}
+
+#nyheter_text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5px;
+}
+#utforska {
+    grid-area: va;
+    display: flex;
+    background: antiquewhite;
+    border-top: solid #bdb296;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#utforska_rutor {
+    display: flex;
+    border-width: 5px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.aktivitets_ruta {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    border: 3px solid black;
+    border-radius: 30px;
+    margin: 50px;
+    flex-direction: column;
+}
+
+footer{ 
+    display: flex;
+    grid-area: fo;
+    width: 100%;
+    background: #ddcfad;
+    border-top: 3px solid #bdb296;
+    padding: 50px;
+    flex-direction: column;
+}
+
+#container{ 
+    display: grid;
+    height: 300vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 30px 250px 80px 1100px 400px;
+    grid-template-areas: 
+    "he he if"   
+    "na na na"
+    "om om om"
+    "vi vi vi"
+    "sa sa sa"
+    "fo fo fo";
 }
 
 #Om_oss{ 
@@ -91,18 +218,6 @@ nav{
     flex-wrap: wrap;
     justify-content: center;
     border-top: 10px solid #344836;
-    
-
-}
-
-footer{ 
-    display: flex;
-    grid-area: fo;
-    width: 100%;
-    background: #ddcfad;
-    border-top: 3px solid #bdb296;
-    padding: 50px 50px;
-    flex-direction: column;
 }
 
 .text_p { 
@@ -134,17 +249,21 @@ p{
     text-decoration: none;
 }
 
-h2 { 
+#section_anställda{
     display: flex;
+    grid-area: sa;
+    background: antiquewhite;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    font-family: garamond, serif;
-
 }
 
-#vi_som_jobbar_här {
+#vi_som_jobbar_har {
     grid-area: vi;
     background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    
+
 }
 #Kontakta_oss { 
     display: block;
@@ -168,3 +287,50 @@ h2 {
     width: 100%;
     border-bottom: 3px solid black;
 }
+
+#resturang_sida {
+    display: grid;
+    height: 150vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 50px 450px 400px;
+    grid-template-areas: 
+    "hr hr"   
+    "vm vm"
+    "vr vr"
+    "fo fo";
+}
+
+#resturang_header {
+    display: grid;
+    grid-area: hr;
+    background: #567659;
+    border-bottom: 10px solid #344836;
+    justify-content: center;
+}
+
+#var_meny {
+    display: flex;
+    grid-area: vm;
+    background: antiquewhite;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 3px solid black;
+}
+
+#johanneberg_hemlank{
+    font-size: 42px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+#vara_ratter {
+    display: flex;
+    grid-area: vr;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+
+
