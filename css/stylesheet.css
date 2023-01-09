@@ -39,6 +39,11 @@ h6 {
     font-size: 18px;
 }
 
+h7{
+    font-size: 24px;
+    color: #DEDEDE;
+}
+
 
 .rubriker{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -375,7 +380,7 @@ p{
     align-items: center;
 }
     
-#bild_anställd { 
+#bild_anstalld { 
     height: auto;
     width: 100%;
     border-bottom: 3px solid #1f2a1f;
@@ -455,8 +460,8 @@ p{
 
 #matratt_ruta{
     display: flex;
-    width: 1400px;
-    height: 600px;
+    width: 1100px;
+    height: 700px;
     background-color: #3a4e3b;
     padding: 20px;
     margin: 40px; 
@@ -468,13 +473,13 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 #varmratter {
     display: flex;
     grid-area: vr;
     background: #344635;
+    justify-content: center;
 }
 
 .mat_ratter {
@@ -483,8 +488,8 @@ p{
     flex-wrap: wrap;
     background-color: #3a4e3b;
     padding: 20px;
-    height: 220px;
-    width: 600px;
+    height: 250px;
+    width: 450px;
 }
 
 .mat_ratter:hover {
@@ -496,26 +501,25 @@ p{
     color: #DEDEDE;
 }
 
-h7{
-    font-size: 28px;
-    color: #DEDEDE;
-}
 
 #dessert {
     display: flex;
     grid-area: ef;
     background: #344635;
+    justify-content: center;
 }
 #barn_meny {
     display: flex;
     grid-area: ba;
     background: #344635;
+    justify-content: center;
 }
 
 #dricka {
     display: flex;
     grid-area: dr;
     background: #344635;
+    justify-content: center;
 }
 
 
